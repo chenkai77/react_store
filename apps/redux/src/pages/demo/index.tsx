@@ -1,5 +1,4 @@
 import "./index.scss";
-import { useAppSelector } from "@/store/index";
 import AComponent from "./AComponent";
 import BComponent from "./BComponent";
 
