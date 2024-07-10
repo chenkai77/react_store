@@ -1,14 +1,10 @@
-import { useAppDispatch } from "@/store/index";
-import { changeAge, changeName } from "@/store/user";
+import { useUserStore } from "@/store/user";
 
 export default function Redux() {
-  const dispatch = useAppDispatch();
-
-  const changeUserName = (val: string) => {
-    dispatch(changeName(val));
-  };
-  const changeUserAge = (val: string) => {
-    dispatch(changeAge(Number(val)));
+  const changeUserName = useUserStore((state) => state.changeName);
+  const changeUserAge = useUserStore((state) => state.changeAge);
+  const ageInputChange = (val: string) => {
+    changeUserAge(Number(val));
   };
 
   return (
@@ -25,7 +21,7 @@ export default function Redux() {
         <span>修改用户年龄：</span>
         <input
           type="number"
-          onChange={(e) => changeUserAge(e.currentTarget.value)}
+          onChange={(e) => ageInputChange(e.currentTarget.value)}
         />
       </div>
     </div>

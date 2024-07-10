@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import Redux from "../pages/redux/index";
+import Demo from "../pages/demo/index";
 
 const routes = createBrowserRouter([
   {
@@ -8,8 +8,8 @@ const routes = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "redux",
-        element: <Redux />,
+        path: "demo",
+        element: <Demo />,
       },
     ],
   },

@@ -1,14 +1,15 @@
-import { useAppDispatch } from "@/store/index";
-import { changeAge, changeName } from "@/store/user";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { nameState, ageState, introductionState } from "@/store/user";
 
 export default function Redux() {
-  const dispatch = useAppDispatch();
+  const [name, setName] = useRecoilState(nameState);
+  const [age, setAge] = useRecoilState(ageState);
 
   const changeUserName = (val: string) => {
-    dispatch(changeName(val));
+    setName(val);
   };
   const changeUserAge = (val: string) => {
-    dispatch(changeAge(Number(val)));
+    setAge(Number(val));
   };
 
   return (
