@@ -1,7 +1,7 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 import { nameState, ageState, introductionState } from "@/store/user";
 
-export default function Redux() {
+export default function BComponent() {
   const [name, setName] = useRecoilState(nameState);
   const [age, setAge] = useRecoilState(ageState);
 

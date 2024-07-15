@@ -6,7 +6,7 @@ import {
   changeNameAtom,
 } from "@/store/user";
 
-export default function Redux() {
+export default function BComponent() {
   const [, setName] = useAtom(nameAtom);
   const [, setAge] = useAtom(ageAtom);
   const setUserName = useSetAtom(changeNameAtom);

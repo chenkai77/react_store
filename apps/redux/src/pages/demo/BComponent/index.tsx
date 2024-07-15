@@ -1,7 +1,7 @@
 import { useAppDispatch } from "@/store/index";
 import { changeAge, changeName } from "@/store/user";
 
-export default function Redux() {
+export default function BComponent() {
   const dispatch = useAppDispatch();
 
   const changeUserName = (val: string) => {

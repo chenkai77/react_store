@@ -1,6 +1,6 @@
 import { useUserStore } from "@/store/user";
 
-export default function Redux() {
+export default function BComponent() {
   const changeUserName = useUserStore((state) => state.changeName);
   const changeUserAge = useUserStore((state) => state.changeAge);
   const ageInputChange = (val: string) => {

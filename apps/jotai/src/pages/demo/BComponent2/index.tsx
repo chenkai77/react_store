@@ -1,9 +1,9 @@
 import { useAtom, useSetAtom } from "jotai";
 import { nameAtom, changeNameAtom } from "@/store/user";
 
-export default function Redux() {
-  const [, setName] = useAtom(nameAtom);
-  // const setName = useSetAtom(changeNameAtom);
+export default function BComponent() {
+  // const [, setName] = useAtom(nameAtom);
+  const setName = useSetAtom(changeNameAtom);
 
   console.log("B组件渲染了");
 
